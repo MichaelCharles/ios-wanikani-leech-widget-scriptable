@@ -3,10 +3,9 @@
 // icon-color: pink; icon-glyph: torii-gate;
 
 /* 
-  Leech Widget version 0.0.1
-  Join the conversation on the Wanikani community forums...
-  ...theoretically. I plan on sharing this on the Wanikani
-  community forums, and when I do I'll put a link here.
+  Leech Widget version 0.0.2
+  Join the conversation on the Wanikani community forums!
+  https://community.wanikani.com/t/scriptable-ios-wanikani-leeches-widget/53682
 */
 
 /*
