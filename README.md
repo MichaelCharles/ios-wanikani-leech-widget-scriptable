@@ -1,5 +1,5 @@
 # An iOS Wanikani Leech Widget implemented using Scriptable
-![IMG_9363|690x467](https://res.cloudinary.com/mca62511/image/upload/v1632580775/IMG_9363_tmwtxn.jpg)
+![IMG_9363|690x467](https://res.cloudinary.com/mca62511/image/upload/v1632987632/IMG_9565_1_ie4my7.png)
 
 If you already know what leeches are, and you already know what Scriptable is, then you can go ahead and grab the script from [here](https://github.com/mcaubrey/ios-wanikani-leech-widget-scriptable/blob/main/script.js). I think it should be fairly self explanatory to anyone whose added an iOS widget using Scriptable before. 
 
