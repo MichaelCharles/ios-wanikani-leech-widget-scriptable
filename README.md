@@ -3,6 +3,10 @@
 
 If you already know what leeches are, and you already know what Scriptable is, then you can go ahead and grab the script from [here](https://github.com/mcaubrey/ios-wanikani-leech-widget-scriptable/blob/main/script.js). I think it should be fairly self explanatory to anyone whose added an iOS widget using Scriptable before. 
 
+# Latest Update: September 30, 2021
+
+Changed to use the new Shin Wanikani Leech Trainer API, and switched from scraping to using the official API. This should make it more reliable overall, as well as potentially solve the problem that some people were having where the shown item did not match the shown meaning. 
+
 # What Are Leeches? 
 
 The term "leech" comes from Anki. Or at least I think it does. Either way, the [Anki manual](https://docs.ankiweb.net/leeches.html) has a [good explanation](https://docs.ankiweb.net/leeches.html) of what they are. In short, leeches are radicals, kanji and vocabulary that for whatever reason you just can't seem to remember. They're the ones that you fail over and over again.
@@ -49,20 +53,11 @@ Here is a video example in case that was hard to follow.
 
 ![ezgif.com-gif-maker (1)|231x500](https://res.cloudinary.com/mca62511/image/upload/v1632580650/ezgif.com-gif-maker_1_ly08k5.gif)
 
+
 # How It Works
 
-I am not calculating which items are leeches on my own. For getting the list of leeches, I'm hitting the same API as the [Shin Wanikani Leech Trainer](https://community.wanikani.com/t/userscript-leech-training/36978) Userscript by Ross Hendry. 
+The leeches are being pulled from the API used by the [Shin Wanikani Leech Trainer](https://community.wanikani.com/t/userscript-leech-training/36978) Userscript by Ross Hendry. From there I hit the official Wanikani API to grab details about the items. 
 
-That API does not return the full details of the Wanikani items. If you're struggling with the reading, it returns the reading. If you're struggling with the meaning, it returns the meaning. I wanted to display both, so while I use that API to grab the initial list of leeches, I'm actually scraping the Wanikani HTML pages to grab the readings and meanings for the individual items.
+# Known Issues
 
-So... it is actually rather brittle. If that API ever goes away, or if the HTML of the kanji and vocabulary pages ever change, then this widget will break.
-
-# Radicals might not work? Or not show up at all? I don't know actually....
-
-I don't actually know if the Shin Wanikani Leech Trainer's API returns radical leeches or not? I don't have any radical leeches, but I'm not sure yet if that's just because I personally don't have any, or if the API doesn't return leech information for radicals at all. 
-
-I've made a dummy Wanikani account to try to generate some radical leeches to test it out, but I haven't come to any conclusions yet. 
-
-In the time being, I wrote the widget to expect radicals and handle them (assuming the json data comes in the way I expect it will). 
-
-#
+ * In situations of low internet connectivity, it will often display as "Oops, something went wrong."

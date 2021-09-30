@@ -3,7 +3,7 @@
 // icon-color: pink; icon-glyph: torii-gate;
 
 /* 
-  Leech Widget version 0.0.2
+  Leech Widget version 0.0.3
   Join the conversation on the Wanikani community forums!
   https://community.wanikani.com/t/scriptable-ios-wanikani-leeches-widget/53682
 */
