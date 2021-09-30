@@ -13,7 +13,7 @@
   it would probably be better to add your token as the "Parameter"
   in the widget settings.
 */
-const apiKey = args.widgetParameter || ''
+const apiKey = args.widgetParameter || '';
 
 // Change default font sizes!
 const bigSize = 42;
@@ -149,9 +149,8 @@ async function buildLeechWidget(listwidget, type, json) {
     textColor = kanjiTextColor;
     shadowColor = kanjiShadowColor;
   }
-  
-  
-let fSize = bigSize;
+
+  let fSize = bigSize;
   if (json.name.length !== 1) fSize = bigSize - ((json.name.length) * 4);
   if (fSize < smallSize) fSize = smallSize;
   let target = listwidget.addText(json.name);
@@ -180,11 +179,13 @@ async function getSubjectInfo(type, subject_id) {
   let r = new Request(url);
   r.headers = { "Authorization": "Bearer " + apiKey };
   const result = await r.loadJSON()
-  console.log(result);
+
+  const meaning = result.data.meanings.filter(a => a.primary)[0].meaning;
+  const reading = result.data.readings.filter(a => a.primary)[0].reading;
 
   return {
-    meaning: result.data.meanings.filter(a => a.primary)[0].meaning,
-    reading: result.data.slug
+    meaning,
+    reading
   }
 }
 
