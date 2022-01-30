@@ -3,7 +3,7 @@
 // icon-color: pink; icon-glyph: torii-gate;
 
 /* 
-  Leech Widget version 0.0.3
+  Leech Widget version 0.0.4
   Join the conversation on the Wanikani community forums!
   https://community.wanikani.com/t/scriptable-ios-wanikani-leeches-widget/53682
 */
@@ -49,7 +49,7 @@ async function createWidget() {
     return makeApiTokenNotice();
   }
 
-  let r = new Request(`https://wk-leeches-dev.pun7u6s23ol8m.eu-west-2.cs.amazonlightsail.com/leeches`);
+  let r = new Request(`https://wk-leeches.herokuapp.com/leeches`);
   r.headers = { "Authorization": "Bearer " + apiKey };
   const json = await r.loadJSON()
 

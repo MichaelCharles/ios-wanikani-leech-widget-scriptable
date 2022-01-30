@@ -1,3 +1,6 @@
+## [0.0.4] - January 30, 2022
+
+* Update URL used to access the Shin Wanikani Leech Trainer API
 
 ## [0.0.3] - September 30, 2021
 
