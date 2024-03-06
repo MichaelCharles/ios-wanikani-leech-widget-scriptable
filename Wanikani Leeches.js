@@ -49,7 +49,7 @@ async function createWidget() {
     return makeApiTokenNotice();
   }
 
-  let r = new Request(`https://wk-leeches.herokuapp.com/leeches`);
+  let r = new Request(`https://leeches.rosshendry.com/leeches`);
   r.headers = { "Authorization": "Bearer " + apiKey };
   const json = await r.loadJSON()
 
